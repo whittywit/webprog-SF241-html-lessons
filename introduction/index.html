@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/flexbox.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel Whitwell | Personal Profile</title>
@@ -158,31 +157,41 @@
                     </div>
                 </div>
 
-                <!-- 6. IT Experience (Added section for structure, currently empty per original) -->
+                <!-- 6. IT Experience -->
                 <div class="content-card bg-white rounded-lg shadow-md hover:shadow-xl">
                     <div class="content-card-title font-semibold text-lg text-secondary-green flex justify-between items-center">
                         <span>IT Experience</span>
                         <svg class="w-5 h-5 text-primary-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1v-3.25m-7.5-3.5h7.5M16 4.75V4m-2 0V4m-4 0V4m-2 0V4"></path></svg>
                     </div>
                     <div class="content-card-details text-gray-700 border-t border-gray-100">
-                        </p>Basic skills in Java, Python, HTML, CSS and KALI.</p>
+                        <p>Basic skills in Java, Python, HTML, CSS and KALI.</p>
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
-<div class="container">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>  
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>  
-  <div>7</div>
-  <div>8</div>
-  <div>9</div>
-  <div>10</div>
-</div>
+    
+    <!-- NEW IMAGE GALLERY SECTION (Replaces the placeholder divs) -->
+    <div class="container w-full max-w-4xl mt-8 p-4 bg-white/90 rounded-2xl shadow-xl flex flex-col items-center">
+        <h2 class="text-2xl font-bold text-primary-pink mb-4 border-b-2 border-secondary-green pb-1">Gaming & Art Gallery</h2>
+        <div class="flex flex-wrap justify-center gap-4 w-full">
+            
+            <!-- Image 1: Counter-Strike 2 Icon -->
+            <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-lg overflow-hidden shadow-md transition duration-300 hover:scale-105 hover:shadow-lg ring-2 ring-secondary-green">
+                <img src="https://static.wikia.nocookie.net/logopedia/images/4/49/Counter-Strike_2_%28Icon%29.png/revision/latest?cb=20230330015359" alt="Counter-Strike 2 Icon" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/128x128/FF69B4/ffffff?text=CS2%20Icon';">
+            </div>
+            
+            <!-- Image 2: Anime Art 1 -->
+            <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-lg overflow-hidden shadow-md transition duration-300 hover:scale-105 hover:shadow-lg ring-2 ring-secondary-green">
+                <img src="https://i.pinimg.com/236x/4b/46/b4/4b46b404aa8542ca46a63ff375ca2e23.jpg" alt="Anime Character 1" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/128x128/FF69B4/ffffff?text=Art%201';">
+            </div>
+            
+            <!-- Image 3: Anime Character 2 -->
+            <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-lg overflow-hidden shadow-md transition duration-300 hover:scale-105 hover:shadow-lg ring-2 ring-secondary-green">
+                <img src="https://i.pinimg.com/474x/f5/dd/24/f5dd24b3418701f617275cfa6a265ac8.jpg" alt="Anime Character 2" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/128x128/FF69B4/ffffff?text=Art%202';">
+            </div>
+        </div>
+    </div>
 </body>
 </html>
