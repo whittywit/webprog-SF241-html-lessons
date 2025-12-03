@@ -2,144 +2,93 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Daniel Whitwell | Personal Profile</title>
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Whitwell | Personal Web Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <style>
-        /* Custom Styles to match the 'Terrence' Screenshot Layout */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
-        }
-
-        /* 1. Purple Header */
-        .profile-header {
-            background-color: #800080; /* Purple */
-            color: white;
+            font-family: sans-serif;
             padding: 20px;
-            text-align: center;
-            font-weight: bold;
-            font-size: 2rem;
-            margin-bottom: 20px;
         }
-
-        /* 2. Blue Navigation Buttons */
-        .nav-btn {
-            background-color: #00BFFF; /* Deep Sky Blue */
-            color: white;
-            padding: 10px;
-            margin-bottom: 5px;
-            text-align: left;
+        .gallery-img {
             width: 100%;
-            border: none;
-            font-weight: 500;
-            display: block;
-            text-decoration: none;
-        }
-        .nav-btn:hover {
-            background-color: #009ACD;
-            color: white;
-        }
-
-        /* 3. Yellow Facts Box */
-        .facts-box {
-            background-color: #FFFFE0; /* Light Yellow */
-            border: 1px solid #00BFFF; /* Blue Border */
-            padding: 15px;
-            height: 100%;
-        }
-
-        /* Profile Image Styling */
-        .profile-img {
-            max-width: 100%;
             height: auto;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 15px;
         }
-
-        /* Spacing for the bottom section */
-        .bottom-section {
+        .section-title {
+            margin-top: 20px;
+            font-weight: 500;
+        }
+        .small-note {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .footer-explanation {
             margin-top: 50px;
+            border-top: 1px solid #ccc;
             padding-top: 20px;
-            border-top: 2px solid #ccc;
         }
     </style>
 </head>
 <body>
 
-    <div class="container-fluid p-0">
-        <div class="profile-header">
-            Personal Profile Web Page - Daniel Whitwell
+    <div class="container">
+        <h1 class="mb-4">My Personal Web Page <i class="bi bi-heart"></i></h1>
+
+        <h4 class="section-title">About Me</h4>
+        <p class="small-note mb-2">( Do not include birthdate / age / contact information)</p>
+        <p>
+            I am Daniel Whitwell. I have a strong interest in computer networking, data representation, and related technologies. 
+            I also enjoy working with SQL and database management.
+        </p>
+
+        <h4 class="section-title">Course</h4>
+        <p>Currently Studying at Asia Pacific College 🏫</p>
+
+        <h4 class="section-title">Education / Achievements</h4>
+        <ul>
+            <li><strong>Technical Skills:</strong> Basic skills in Java, Python, HTML, CSS, and KALI.</li>
+            <li><strong>Current Focus:</strong> Expanding knowledge in Physics (measurements, vectors) and Network Infrastructure.</li>
+        </ul>
+
+        <h4 class="section-title">Hobbies & Interests</h4>
+        <p>
+            I enjoy playing basketball, online gaming, and listening to music.
+        </p>
+
+        <h4 class="section-title">Goals In Life / Dream</h4>
+        <p>Traveling the world is my life's dream.</p>
+
+        <h4 class="section-title mb-3">Picture Gallery</h4>
+        
+        <div class="row">
+            <div class="col-md">
+                <img src="https://placehold.co/400x500?text=Daniel's+Photo+1" alt="Daniel Photo 1" class="gallery-img">
+            </div>
+            <div class="col-md">
+                 <img src="https://placehold.co/400x500?text=Daniel's+Photo+2" alt="Daniel Photo 2" class="gallery-img">
+            </div>
+            <div class="col-md">
+                 <img src="https://placehold.co/400x500?text=Daniel's+Photo+3" alt="Daniel Photo 3" class="gallery-img">
+            </div>
+        </div>
+
+        <div class="footer-explanation">
+            <h2>Responsive Auto Layout Columns</h2>
+            <p>
+                In Bootstrap 5, there is an easy way to create equal width columns: just use the <code>.col-md</code> class on a specified number of col elements. 
+                Bootstrap will recognize how many columns there are, and each column will get the same width.
+            </p>
+            <p>
+                If the screen size is <strong>less than 768px</strong>, the columns will stack horizontally.
+            </p>
         </div>
     </div>
 
-    <div class="container-fluid">
-        <div class="row">
-            
-            <div class="col-md-2">
-                <a href="#" class="nav-btn">About me</a>
-                <a href="#" class="nav-btn">Education/Achievements</a>
-                <a href="#" class="nav-btn">Course</a>
-                <a href="#" class="nav-btn">Hobbies & Interests</a>
-                <a href="#" class="nav-btn">Goals in Life</a>
-                <a href="#" class="nav-btn">IT Experience</a>
-            </div>
-
-            <div class="col-md-8">
-                <h2 class="fw-bold">About me</h2>
-                
-                <img src="https://i.pinimg.com/1200x/21/7c/94/217c941f96d0457074411d1896d3625a.jpg" 
-                     alt="LeBron James" 
-                     class="profile-img" 
-                     style="max-width: 300px;">
-
-                <div class="mb-3">
-                    <p><strong>About Me:</strong> I'm Daniel Whitwell, a student excited to start this course. I am currently studying a Bachelor of Science in Computer Science Specializing in Cybersecurity & Forensics.</p>
-                    
-                    <p><strong>Education / Achievements:</strong> Graduated from GE in Senior High School (General Education track).</p>
-                    
-                    <p><strong>IT Experience:</strong> 3+ years in web development and IT security. Basic skills in Java, Python, HTML, CSS and KALI.</p>
-                    
-                    <p><strong>Hobbies & Interests:</strong> Watching anime, Playing all sorts of video games, Listening to music, Volleyball, Gym.</p>
-                    
-                    <p><strong>Goals In Life / Dream:</strong> To become a successful Computer Science student, help secure the digital world, make money, and make the love of my life the happiest girl in the world.</p>
-                </div>
-            </div>
-
-            <div class="col-md-2">
-                <div class="facts-box">
-                    <h5 class="fw-bold">Facts:</h5>
-                    <ul>
-                        <li>I like cooking</li>
-                        <li>I'm Lebron 👑 Son</li>
-                        <li>Cybersecurity Student</li>
-                        <li>Gamer</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid bottom-section">
-        <h1>Responsive Auto Layout Columns</h1>
-        <p>In Bootstrap 5, there is an easy way to create equal width columns: just use the <code>.col-md</code> class on a specified number of col elements. Bootstrap will recognize how many columns there are, and each column will get the same width.</p>
-        <p>If the screen size is <strong>less than 768px</strong>, the columns will stack horizontally.</p>
-        
-        <div class="row mb-3">
-            <div class="col-md bg-primary text-white p-3 border">1 of 2</div>
-            <div class="col-md bg-dark text-white p-3 border">2 of 2</div>
-        </div>  
-        
-        <div class="row">
-            <div class="col-md bg-primary text-white p-3 border">1 of 4</div>
-            <div class="col-md bg-dark text-white p-3 border">2 of 4</div>
-            <div class="col-md bg-primary text-white p-3 border">3 of 4</div>
-            <div class="col-md bg-dark text-white p-3 border">4 of 4</div>
-        </div>  
-    </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
