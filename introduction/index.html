@@ -1,70 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Whitwell | Personal Profile</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        /* Custom Theme Configuration */
-        :root {
-            --color-primary-pink: #FF69B4; /* Deep Pink */
-            --color-secondary-green: #3CB371; /* Medium Sea Green */
-            --color-bg-light: #F0F9F1;
-            --color-text-dark: #333333;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel Whitwell | Personal Profile</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+    /* Custom Tailwind config override for pink and green theme */
+    :root {
+        --color-primary-pink: #FF69B4; /* Deep Pink */
+        --color-secondary-green: #3CB371; /* Medium Sea Green */
+        --color-bg-light: #F0F9F1;
+        --color-text-dark: #333333;
+    }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--color-bg-light);
-            color: var(--color-text-dark);
-            padding: 2rem;
-        }
+    .text-primary-pink { color: var(--color-primary-pink); }
+    .bg-primary-pink { background-color: var(--color-primary-pink); }
+    .text-secondary-green { color: var(--color-secondary-green); }
+    .bg-secondary-green { background-color: var(--color-secondary-green); }
 
-        /* Helper Classes */
-        .text-primary-pink { color: var(--color-primary-pink); }
-        .bg-primary-pink { background-color: var(--color-primary-pink); }
-        .text-secondary-green { color: var(--color-secondary-green); }
-        .bg-secondary-green { background-color: var(--color-secondary-green); }
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--color-bg-light);
+        padding: 20px;
+    }
 
-        /* Grid Layout for Images */
-        .image-grid-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 Columns */
-            gap: 1.5rem; /* Space between images */
-            max-width: 1200px;
-            margin: 2rem auto; /* Margin top/bottom and centered */
-        }
+    /* CSS Grid Styles for the bottom images */
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 Columns */
+        gap: 1rem; /* Space between images */
+        padding-top: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-        .image-grid-container div {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            aspect-ratio: 1; /* Makes the images square squares */
-            transition: transform 0.3s ease;
-        }
+    .container div {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        aspect-ratio: 1 / 1; /* Keeps images square */
+    }
 
-        .image-grid-container div:hover {
-            transform: scale(1.02); /* Slight zoom effect on hover */
-        }
+    .container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+    }
 
-        .image-grid-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures images fill the square without stretching */
-            display: block;
-        }
-
-        /* Responsive adjustments for mobile */
-        @media (max-width: 768px) {
-            .image-grid-container {
-                grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
-            }
-        }
-    </style>
+    .container img:hover {
+        transform: scale(1.05);
+    }
+</style>
 </head>
 <body>
 
@@ -75,24 +65,30 @@
             <p class="text-secondary-green font-semibold">Personal Profile</p>
         </div>
 
-        <div class="content-card bg-white rounded-lg shadow-md hover:shadow-xl p-6 transition-shadow">
+        <div class="content-card bg-white rounded-lg shadow-md hover:shadow-xl p-6">
             <div class="content-card-title font-semibold text-lg text-secondary-green flex justify-between items-center mb-4">
                 <span>Goals In Life / Dream</span>
-                <svg class="w-6 h-6 text-primary-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.104A9 9 0 1110.518 2.378a9 9 0 008.09 2.518z"></path>
-                </svg>
+                <svg class="w-5 h-5 text-primary-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.104A9 9 0 1110.518 2.378a9 9 0 008.09 2.518z"></path></svg>
             </div>
             <div class="content-card-details text-gray-700 border-t border-gray-100 pt-4">
                 <p>Make money and make the love of my life the happiest girl in the world.</p>
             </div>
         </div>
 
-        <div class="content-card bg-white rounded-lg shadow-md hover:shadow-xl p-6 transition-shadow">
+        <div class="content-card bg-white rounded-lg shadow-md hover:shadow-xl p-6">
+            <div class="content-card-title font-semibold text-lg text-secondary-green flex justify-between items-center mb-4">
+                <span>Hobbies</span>
+                <svg class="w-5 h-5 text-primary-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+            </div>
+            <div class="content-card-details text-gray-700 border-t border-gray-100 pt-4">
+                <p>Playing basketball, online gaming, listening to music, and traveling.</p>
+            </div>
+        </div>
+
+        <div class="content-card bg-white rounded-lg shadow-md hover:shadow-xl p-6">
             <div class="content-card-title font-semibold text-lg text-secondary-green flex justify-between items-center mb-4">
                 <span>IT Experience</span>
-                <svg class="w-6 h-6 text-primary-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1v-3.25m-7.5-3.5h7.5M16 4.75V4m-2 0V4m-4 0V4m-2 0V4"></path>
-                </svg>
+                <svg class="w-5 h-5 text-primary-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1v-3.25m-7.5-3.5h7.5M16 4.75V4m-2 0V4m-4 0V4m-2 0V4"></path></svg>
             </div>
             <div class="content-card-details text-gray-700 border-t border-gray-100 pt-4">
                 <p>Basic skills in Java, Python, HTML, CSS and KALI.</p>
@@ -101,24 +97,24 @@
 
     </div>
 
-    <div class="image-grid-container">
+    <div class="container">
         <div>
-            <img src="https://i.pinimg.com/1200x/a3/2c/94/a32c947afd620ba53de48a21b29fad64.jpg" alt="Gallery 1">
+            <img src="https://i.pinimg.com/1200x/a3/2c/94/a32c947afd620ba53de48a21b29fad64.jpg" alt="Img 1">
         </div>
         <div>
-            <img src="https://i.pinimg.com/736x/26/99/f9/2699f9f1c925eeb2e35741286c15c6b0.jpg" alt="Gallery 2">
+            <img src="https://i.pinimg.com/736x/26/99/f9/2699f9f1c925eeb2e35741286c15c6b0.jpg" alt="Img 2">
         </div>
         <div>
-            <img src="https://i.pinimg.com/474x/ac/e0/23/ace0233fe4eb79af69fa7e2b340567e4.jpg" alt="Gallery 3">
+            <img src="https://i.pinimg.com/474x/ac/e0/23/ace0233fe4eb79af69fa7e2b340567e4.jpg" alt="Img 3">
         </div>
         <div>
-            <img src="https://i.pinimg.com/474x/f3/5e/d6/f35ed63e02e38c69576d1dd52173438e.jpg" alt="Gallery 4">
+            <img src="https://i.pinimg.com/474x/f3/5e/d6/f35ed63e02e38c69576d1dd52173438e.jpg" alt="Img 4">
         </div>
         <div>
-            <img src="https://i.pinimg.com/236x/39/e4/70/39e470eea81301d05364071c1f03fd04.jpg" alt="Gallery 5">
+            <img src="https://i.pinimg.com/236x/39/e4/70/39e470eea81301d05364071c1f03fd04.jpg" alt="Img 5">
         </div>
         <div>
-            <img src="https://i.pinimg.com/474x/50/5b/78/505b783931d330b7432139face009bbf.jpg" alt="Gallery 6">
+            <img src="https://i.pinimg.com/474x/50/5b/78/505b783931d330b7432139face009bbf.jpg" alt="Img 6">
         </div>
     </div>
 
