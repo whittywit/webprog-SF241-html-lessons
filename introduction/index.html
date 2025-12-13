@@ -12,12 +12,16 @@
             font-family: sans-serif;
             padding-top: 20px;
             padding-bottom: 20px;
+            background-color: #f8f9fa; /* Light gray background for a modern look */
         }
         .container-main {
             /* Kept a specific max-width container for the main bio content */
             max-width: 900px; 
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 20px 15px;
+            background-color: #ffffff; /* White background for the main content box */
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+            border-radius: 0.5rem;
         }
         .gallery-img {
             max-width: 100%;
@@ -28,35 +32,38 @@
             object-fit: cover;
         }
         .section-title {
-            margin-top: 20px;
-            font-weight: 500;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-weight: 600; /* Slightly heavier */
+            color: #0d6efd; /* Use a Bootstrap primary color */
+            border-bottom: 2px solid #0d6efd;
+            display: inline-block;
+            padding-bottom: 3px;
         }
         .small-note {
             font-size: 0.85rem;
             color: #6c757d;
         }
-        /* Style for the integrated footer section to separate it slightly */
-        .layout-examples {
-            margin-top: 50px;
-            border-top: 1px solid #ccc;
-            padding-top: 20px;
+        li strong {
+            color: #212529;
         }
     </style>
 </head>
 <body>
 
     <div class="container-main">
-        <h1 class="mb-4">My Personal Web Page - Daniel Whitwell</h1>
+        <h1 class="mb-4 text-center">Daniel Whitwell's Personal Web Page</h1>
+        <hr>
 
         <h4 class="section-title">About Me</h4>
         <p class="small-note mb-2">( Do not include birthdate / age / contact information)</p>
         <p>
-            I am Daniel Whitwell. I have a strong interest in computer networking, data representation, and related technologies. 
-            I also enjoy working with SQL and database management.
+            I am Daniel Whitwell. I have a strong interest in **computer networking**, **data representation**, and related technologies. 
+            I also enjoy working with **SQL** and database management.
         </p>
 
         <h4 class="section-title">Course</h4>
-        <p>Currently Studying at Asia Pacific College 🏫</p>
+        <p>Currently Studying at **Asia Pacific College** 🏫</p>
 
         <h4 class="section-title">Education / Achievements</h4>
         <ul>
@@ -74,33 +81,11 @@
 
         <h4 class="section-title mb-3">Picture Gallery</h4>
         
-        <div class="row">
-            <div class="col-md-12">
-                <img src="https://i.pinimg.com/1200x/21/7c/94/217c941f96d0457074411d1896d3625a.jpg" alt="Guy throwing the rock" class="gallery-img">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-12">
+                <img src="https://i.pinimg.com/1200x/21/7c/94/217c941f96d0457074411d1896d3625a.jpg" alt="Guy throwing the rock" class="gallery-img shadow-sm">
+                <p class="text-center small-note">An image for the gallery.</p>
             </div>
-        </div>
-    </div>
-
-    <div class="container-fluid mt-3 layout-examples">
-        <h1>Responsive Auto Layout Columns</h1>
-        <p>In Bootstrap 5, there is an easy way to create equal width columns: just use the <code>.col-md</code> class on a specified number of col elements. Bootstrap will recognize how many columns there are, and each column will get the same width.</p>
-        <p>If the screen size is <strong>less than 768px</strong>, the columns will stack horizontally.</p>
-        
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md bg-primary text-white">1 of 2</div>
-                <div class="col-md bg-dark text-white">2 of 2</div>
-            </div>  
-        </div>
-        <br>
-        
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md bg-primary text-white">1 of 4</div>
-                <div class="col-md bg-dark text-white">2 of 4</div>
-                <div class="col-md bg-primary text-white">3 of 4</div>
-                <div class="col-md bg-dark text-white">4 of 4</div>
-            </div>  
         </div>
     </div>
 
